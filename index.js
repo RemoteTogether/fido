@@ -20,6 +20,31 @@ bot.startRTM(function (err, bot, payload) {
   }
 })
 
+controller.hears('urban (.+)', ['direct_message', 'direct_mention'], function (bot, message) {
+    var word = message.match[1];
+    
+    http.get('http://api.urbandictionary.com/v0/define?term=' + encodeURIComponent(word), function(res) {
+        var body = '';
+
+        res.on('data', function(chunk) {
+            body += chunk;
+        });
+
+        res.on('end', function() {
+            var response = JSON.parse(body),
+                entries = response.list;
+
+            if (entries.length) {
+                var entry = entries[0];
+                console.log('<@' + message.user +'> ' + entry.word + ': ' + entry.definition);
+                bot.reply(message, '<@' + message.user +'> ' + entry.word + ': ' + entry.definition);
+            } else {
+                bot.reply(message, '<@' + message.user +'>, I could not look up that word. Are you sure you typed it correctly?');
+            }
+        });
+    });
+})
+
 controller.hears('define (.+)', ['direct_message', 'direct_mention'], function (bot, message) {
   var reference = 'collegiate',
   references = 
