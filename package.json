@@ -1,26 +1,27 @@
 {
-  "name": "node-slack-bot",
+  "name": "fido",
   "version": "1.0.0",
-  "description": "A sample Beep Boop Node.js Slackbot",
+  "description": "Slack bot for Remote Together, forked from Beep Boop",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beepboophq/node-slack-bot.git"
+    "url": "git+https://github.com/RemoteTogether/fido.git"
   },
   "keywords": [
     "slackbot",
     "bot",
-    "slack"
+    "slack",
+    "remotetogether"
   ],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/beepboophq/node-slack-bot/issues"
+    "url": "https://github.com/RemoteTogether/fido/issues"
   },
-  "homepage": "https://github.com/beepboophq/node-slack-bot#readme",
+  "homepage": "https://github.com/RemoteTogether/fido#readme",
   "dependencies": {
     "botkit": "0.0.5",
     "libxmljs": "~0.17.1",

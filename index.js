@@ -22,7 +22,7 @@ bot.startRTM(function (err, bot, payload) {
 
 controller.hears('urban (.+)', ['direct_message', 'direct_mention'], function (bot, message) {
     var word = message.match[1];
-    
+
     http.get('http://api.urbandictionary.com/v0/define?term=' + encodeURIComponent(word), function(res) {
         var body = '';
 
@@ -47,7 +47,7 @@ controller.hears('urban (.+)', ['direct_message', 'direct_mention'], function (b
 
 controller.hears('define (.+)', ['direct_message', 'direct_mention'], function (bot, message) {
   var reference = 'collegiate',
-  references = 
+  references =
   word = message.match[1];
 
   var websterApiKey = process.env.WEBSTER_API_KEY;

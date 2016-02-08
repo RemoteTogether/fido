@@ -1,8 +1,8 @@
-name: fido 
+name: fido
 description: A simple node.js starter bot for Beep Boop
 avatar: resources/avatar.png
 config:
   - name: WEBSTER_API_KEY
-    friendly_name: Webster API Key 
+    friendly_name: Webster API Key
     info: This is the key we use to do dictionary look-ups
-    type: secret 
+    type: secret
