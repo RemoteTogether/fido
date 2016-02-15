@@ -27,5 +27,9 @@
     "libxmljs": "~0.17.1",
     "http": "0.0.0",
     "bluebird": "~3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^5.0.0"
   }
 }
